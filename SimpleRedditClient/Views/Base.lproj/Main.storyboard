@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y5d-OK-2Nn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Top-->
+        <scene sceneID="UAo-qw-UCc">
+            <objects>
+                <navigationController id="csR-B9-j5e" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Top" image="chart.bar" catalog="system" selectedImage="chart.bar.fill" id="iLa-dw-GU0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UeK-wS-Js3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sg3-Kc-KAN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2641" y="874"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="O1H-yD-CKB">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarViewController" id="Y5d-OK-2Nn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bNa-Qh-FXs"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AGr-gc-4zg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="csR-B9-j5e" kind="relationship" relationship="viewControllers" id="k9Q-p1-qpu"/>
+                        <segue destination="2CZ-5z-kdQ" kind="relationship" relationship="viewControllers" id="U06-ty-7HK"/>
+                        <segue destination="pZ0-LA-BUb" kind="relationship" relationship="viewControllers" id="AY5-3A-vpe"/>
+                        <segue destination="PJ2-7J-tkK" kind="relationship" relationship="viewControllers" id="jKD-HH-Vti"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VFG-cL-K4p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1343" y="110"/>
+        </scene>
+        <!--Popular-->
+        <scene sceneID="EYD-gj-ldg">
+            <objects>
+                <navigationController id="2CZ-5z-kdQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Popular" image="star" catalog="system" selectedImage="star.fill" id="FbV-8d-Rzx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XeZ-eR-76j">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oFK-T8-Ooj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1687" y="874"/>
+        </scene>
+        <!--Hot-->
+        <scene sceneID="zN7-8w-N5A">
+            <objects>
+                <navigationController id="pZ0-LA-BUb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hot" image="flame" catalog="system" selectedImage="flame.fill" id="MFm-yT-iRc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YbN-1e-jZw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8K-n2-Vp0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="874"/>
+        </scene>
+        <!--New-->
+        <scene sceneID="8Bf-70-b9L">
+            <objects>
+                <navigationController id="PJ2-7J-tkK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New" image="clock" catalog="system" selectedImage="clock.fill" id="kYP-Rn-0VI"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cjh-F1-EXM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ba3-LS-L8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="874"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart.bar" catalog="system" width="64" height="44"/>
+        <image name="chart.bar.fill" catalog="system" width="64" height="44"/>
+        <image name="clock" catalog="system" width="64" height="60"/>
+        <image name="clock.fill" catalog="system" width="64" height="60"/>
+        <image name="flame" catalog="system" width="54" height="64"/>
+        <image name="flame.fill" catalog="system" width="54" height="64"/>
+        <image name="star" catalog="system" width="64" height="58"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
+    </resources>
+</document>
