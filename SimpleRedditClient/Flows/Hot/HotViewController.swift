@@ -11,4 +11,9 @@ import UIKit
 class HotViewController: UIViewController, Storyboarded {
     weak var delegate: HotListDelegate?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.title = "Reddit: Hot"
+    }
 }

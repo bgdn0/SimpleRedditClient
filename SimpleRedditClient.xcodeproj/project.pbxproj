@@ -38,6 +38,17 @@
 		43BCA26B237155A800A8F3EE /* QueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA26A237155A800A8F3EE /* QueryParams.swift */; };
 		43BCA26D2371580500A8F3EE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA26C2371580500A8F3EE /* HTTPClient.swift */; };
 		43BCA26F237158BD00A8F3EE /* RDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA26E237158BD00A8F3EE /* RDError.swift */; };
+		43BCA2722371629600A8F3EE /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2712371629600A8F3EE /* DataProvider.swift */; };
+		43BCA27C237171E400A8F3EE /* FetchParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA27B237171E400A8F3EE /* FetchParams.swift */; };
+		43BCA27E2371727400A8F3EE /* ProviderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA27D2371727400A8F3EE /* ProviderConfiguration.swift */; };
+		43BCA280237172AD00A8F3EE /* NetworkDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA27F237172AD00A8F3EE /* NetworkDataProvider.swift */; };
+		43BCA2A423719F5C00A8F3EE /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2A223719F5C00A8F3EE /* PostTableViewCell.swift */; };
+		43BCA2A523719F5C00A8F3EE /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA2A323719F5C00A8F3EE /* PostTableViewCell.xib */; };
+		43BCA2D32371C0ED00A8F3EE /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2D22371C0ED00A8F3EE /* DataManagerProtocol.swift */; };
+		43BCA2D52371E00B00A8F3EE /* TableViewDatasourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2D42371E00B00A8F3EE /* TableViewDatasourceProvider.swift */; };
+		43BCA2D72371E27800A8F3EE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2D62371E27800A8F3EE /* DataManager.swift */; };
+		43BCA2D92371EA0500A8F3EE /* TableViewDatasourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2D82371EA0500A8F3EE /* TableViewDatasourceFactory.swift */; };
+		43BCA2DB2371F19700A8F3EE /* UITableView+CellRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2DA2371F19700A8F3EE /* UITableView+CellRegister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +85,17 @@
 		43BCA26A237155A800A8F3EE /* QueryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParams.swift; sourceTree = "<group>"; };
 		43BCA26C2371580500A8F3EE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		43BCA26E237158BD00A8F3EE /* RDError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDError.swift; sourceTree = "<group>"; };
+		43BCA2712371629600A8F3EE /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		43BCA27B237171E400A8F3EE /* FetchParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchParams.swift; sourceTree = "<group>"; };
+		43BCA27D2371727400A8F3EE /* ProviderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderConfiguration.swift; sourceTree = "<group>"; };
+		43BCA27F237172AD00A8F3EE /* NetworkDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataProvider.swift; sourceTree = "<group>"; };
+		43BCA2A223719F5C00A8F3EE /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		43BCA2A323719F5C00A8F3EE /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		43BCA2D22371C0ED00A8F3EE /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
+		43BCA2D42371E00B00A8F3EE /* TableViewDatasourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDatasourceProvider.swift; sourceTree = "<group>"; };
+		43BCA2D62371E27800A8F3EE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		43BCA2D82371EA0500A8F3EE /* TableViewDatasourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDatasourceFactory.swift; sourceTree = "<group>"; };
+		43BCA2DA2371F19700A8F3EE /* UITableView+CellRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellRegister.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +180,7 @@
 				43BCA2602371447500A8F3EE /* Hot.storyboard */,
 				43BCA1E52371005E00A8F3EE /* Details.storyboard */,
 				43BCA20B2371197D00A8F3EE /* StoryboardsEnum.swift */,
+				43BCA2A123719F3400A8F3EE /* Cell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +214,8 @@
 		43BCA1ED237101B600A8F3EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43BCA2D12371BF9200A8F3EE /* DataManager */,
+				43BCA2702371628200A8F3EE /* DataProvider */,
 				43BCA2642371485800A8F3EE /* Model.swift */,
 			);
 			path = Model;
@@ -241,6 +266,9 @@
 			isa = PBXGroup;
 			children = (
 				43BCA2092371192400A8F3EE /* Storyboarded.swift */,
+				43BCA2D42371E00B00A8F3EE /* TableViewDatasourceProvider.swift */,
+				43BCA2D82371EA0500A8F3EE /* TableViewDatasourceFactory.swift */,
+				43BCA2DA2371F19700A8F3EE /* UITableView+CellRegister.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -252,6 +280,35 @@
 				43BCA262237145E800A8F3EE /* HotListDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		43BCA2702371628200A8F3EE /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				43BCA2712371629600A8F3EE /* DataProvider.swift */,
+				43BCA27B237171E400A8F3EE /* FetchParams.swift */,
+				43BCA27D2371727400A8F3EE /* ProviderConfiguration.swift */,
+				43BCA27F237172AD00A8F3EE /* NetworkDataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		43BCA2A123719F3400A8F3EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				43BCA2A223719F5C00A8F3EE /* PostTableViewCell.swift */,
+				43BCA2A323719F5C00A8F3EE /* PostTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		43BCA2D12371BF9200A8F3EE /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				43BCA2D22371C0ED00A8F3EE /* DataManagerProtocol.swift */,
+				43BCA2D62371E27800A8F3EE /* DataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +376,7 @@
 				43BCA1C723708EDB00A8F3EE /* Main.storyboard in Resources */,
 				43BCA1DE2371003400A8F3EE /* Top.storyboard in Resources */,
 				43BCA1E62371005E00A8F3EE /* Details.storyboard in Resources */,
+				43BCA2A523719F5C00A8F3EE /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,11 +388,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				43BCA263237145E800A8F3EE /* HotListDelegate.swift in Sources */,
+				43BCA2D72371E27800A8F3EE /* DataManager.swift in Sources */,
 				43BCA1F22371032100A8F3EE /* TopViewController.swift in Sources */,
+				43BCA2D92371EA0500A8F3EE /* TableViewDatasourceFactory.swift in Sources */,
 				43BCA20C2371197D00A8F3EE /* StoryboardsEnum.swift in Sources */,
 				43BCA1D62370E5A500A8F3EE /* Coordinator.swift in Sources */,
 				43BCA205237110D400A8F3EE /* Routable.swift in Sources */,
+				43BCA2A423719F5C00A8F3EE /* PostTableViewCell.swift in Sources */,
+				43BCA2D52371E00B00A8F3EE /* TableViewDatasourceProvider.swift in Sources */,
 				43BCA1FD2371047F00A8F3EE /* FullImageViewController.swift in Sources */,
+				43BCA2DB2371F19700A8F3EE /* UITableView+CellRegister.swift in Sources */,
 				43BCA1C023708EDB00A8F3EE /* AppDelegate.swift in Sources */,
 				43BCA2342371304300A8F3EE /* TopCoordinator.swift in Sources */,
 				43BCA23B2371347D00A8F3EE /* HotCoordinator.swift in Sources */,
@@ -346,13 +409,18 @@
 				43BCA2072371140000A8F3EE /* Router.swift in Sources */,
 				43BCA20A2371192400A8F3EE /* Storyboarded.swift in Sources */,
 				43BCA26F237158BD00A8F3EE /* RDError.swift in Sources */,
+				43BCA2722371629600A8F3EE /* DataProvider.swift in Sources */,
+				43BCA27E2371727400A8F3EE /* ProviderConfiguration.swift in Sources */,
+				43BCA280237172AD00A8F3EE /* NetworkDataProvider.swift in Sources */,
 				43BCA26B237155A800A8F3EE /* QueryParams.swift in Sources */,
 				43BCA1C223708EDB00A8F3EE /* SceneDelegate.swift in Sources */,
+				43BCA27C237171E400A8F3EE /* FetchParams.swift in Sources */,
 				43BCA267237154FF00A8F3EE /* RedditHTTPClient.swift in Sources */,
 				43BCA2652371485800A8F3EE /* Model.swift in Sources */,
 				43BCA26D2371580500A8F3EE /* HTTPClient.swift in Sources */,
 				43BCA20123710F8900A8F3EE /* AppCoordinator.swift in Sources */,
 				43BCA1FB2371043700A8F3EE /* PostDetailsViewController.swift in Sources */,
+				43BCA2D32371C0ED00A8F3EE /* DataManagerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

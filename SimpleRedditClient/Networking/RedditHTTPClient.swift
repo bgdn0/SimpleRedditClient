@@ -38,6 +38,8 @@ class RedditHTTPClient: HTTPClient {
             return
         }
         
+        print(url.absoluteURL)
+        
         session.dataTask(with: url) { (data, response, error) in
             if let error = error as NSError? {
                 

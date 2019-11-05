@@ -8,6 +8,19 @@
 
 import Foundation
 
+protocol RDPostProtocol {
+    var name: String { get }
+    var subRedditName: String { get }
+    var authorFullName: String { get }
+    var title: String { get }
+    var createdDate: Date? { get }
+    var votes: Int { get }
+    var numberOfComments: Int { get }
+    var url: URL { get }
+    var thumbnailURL: URL? { get }
+    var fullImageURL: URL? { get }
+}
+
 struct RDResponse: Decodable {
     let listing: RDListing
     
@@ -27,7 +40,7 @@ struct RDChild: Decodable {
     var data: RDPost
 }
 
-struct RDPost: Decodable {
+struct RDPost: RDPostProtocol, Decodable {
     var name: String
     var subRedditName: String
     var authorFullName: String
@@ -58,24 +71,38 @@ struct RDPost: Decodable {
         
         self.name = try container.decode(String.self, forKey: .name)
         self.subRedditName = try container.decode(String.self, forKey: .subRedditName)
-        self.authorFullName = try container.decode(String.self, forKey: .authorFullName)
+        if container.contains(.authorFullName) {
+            self.authorFullName = try container.decode(String.self, forKey: .authorFullName)
+        } else {
+            self.authorFullName = ""
+        }
         self.title = try container.decode(String.self, forKey: .title)
         self.votes = try container.decode(Int.self, forKey: .votes)
         self.numberOfComments = try container.decode(Int.self, forKey: .numberOfComments)
         self.createdDate = Date(timeIntervalSince1970: try container.decode(Double.self, forKey: .createdDate))
-        self.url = try container.decode(URL.self, forKey: .url)
+        let stringURL = try container.decode(String.self, forKey: .url)
+        if let encodedStringURL = stringURL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+            let url = URL(string: encodedStringURL) {
+            self.url = url
+        } else {
+            self.url = try container.decode(URL.self, forKey: .url)
+        }
+
         self.thumbnailURL = try? container.decode(URL.self, forKey: .thumbnailURL)
-        if let preview = try? container.decode(RDPreview.self, forKey: .preview) {
+        if container.contains(.preview),
+            let preview = try? container.decode(RDPreview.self, forKey: .preview) {
             self.preview = preview
-            if let firstImg = preview.images.first {
+            if let firstImg = preview.images?.first {
                 self.fullImageURL = firstImg.source.url
             }
+        } else {
+            self.preview = nil
         }
     }
 }
 
 struct RDPreview: Decodable {
-    let images: [RDImage]
+    let images: [RDImage]?
 }
 
 struct RDImage: Decodable {

@@ -15,30 +15,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4We-zE-cDu">
-                                <rect key="frame" x="56" y="145" width="70" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Full Image"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6xG-2O-Rju">
+                                <rect key="frame" x="0.0" y="44" width="414" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="1SV-QR-0PV"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Now"/>
+                                    <segment title="Today"/>
+                                    <segment title="Week"/>
+                                    <segment title="Month"/>
+                                    <segment title="Year"/>
+                                    <segment title="All time"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b7d-J9-iXy">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
-                                    <action selector="fullImageAction:" destination="ygN-kl-Idy" eventType="touchUpInside" id="7R8-bC-cUz"/>
+                                    <outlet property="delegate" destination="ygN-kl-Idy" id="FbM-RD-WWO"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcY-GK-4ye">
-                                <rect key="frame" x="166" y="145" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Post Details"/>
-                                <connections>
-                                    <action selector="postDetailsAction:" destination="ygN-kl-Idy" eventType="touchUpInside" id="6FS-Ao-cbS"/>
-                                </connections>
-                            </button>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6xG-2O-Rju" firstAttribute="leading" secondItem="YCb-WL-HfW" secondAttribute="leading" id="2So-Mn-iLh"/>
+                            <constraint firstItem="b7d-J9-iXy" firstAttribute="top" secondItem="6xG-2O-Rju" secondAttribute="bottom" constant="8" id="7yq-Gr-s0n"/>
+                            <constraint firstItem="b7d-J9-iXy" firstAttribute="leading" secondItem="YCb-WL-HfW" secondAttribute="leading" id="LSQ-Id-1T2"/>
+                            <constraint firstItem="6xG-2O-Rju" firstAttribute="top" secondItem="YCb-WL-HfW" secondAttribute="top" id="MSo-fh-27s"/>
+                            <constraint firstAttribute="bottom" secondItem="b7d-J9-iXy" secondAttribute="bottom" id="Wei-en-rze"/>
+                            <constraint firstItem="YCb-WL-HfW" firstAttribute="trailing" secondItem="6xG-2O-Rju" secondAttribute="trailing" id="fMg-UT-8Kk"/>
+                            <constraint firstItem="b7d-J9-iXy" firstAttribute="trailing" secondItem="YCb-WL-HfW" secondAttribute="trailing" id="rRL-e2-tbp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YCb-WL-HfW"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="b7d-J9-iXy" id="0SF-r4-QqD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQM-Fg-zII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="153"/>
+            <point key="canvasLocation" x="47.826086956521742" y="152.67857142857142"/>
         </scene>
     </scenes>
 </document>

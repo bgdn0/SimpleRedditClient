@@ -19,6 +19,7 @@ class TopCoordinator: Coordinator {
     func start() {
         let topViewController = TopViewController.instantiate(from: Storyboards.top)
         topViewController.delegate = self
+        topViewController.tableViewDatasource = TableViewDatasourceFactory.provider(for: .top)
         presenter.push(topViewController, animated: true)
     }
 }
