@@ -33,6 +33,11 @@
 		43BCA2612371447500A8F3EE /* Hot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA2602371447500A8F3EE /* Hot.storyboard */; };
 		43BCA263237145E800A8F3EE /* HotListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA262237145E800A8F3EE /* HotListDelegate.swift */; };
 		43BCA2652371485800A8F3EE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2642371485800A8F3EE /* Model.swift */; };
+		43BCA267237154FF00A8F3EE /* RedditHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA266237154FF00A8F3EE /* RedditHTTPClient.swift */; };
+		43BCA2692371554600A8F3EE /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2682371554600A8F3EE /* Endpoints.swift */; };
+		43BCA26B237155A800A8F3EE /* QueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA26A237155A800A8F3EE /* QueryParams.swift */; };
+		43BCA26D2371580500A8F3EE /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA26C2371580500A8F3EE /* HTTPClient.swift */; };
+		43BCA26F237158BD00A8F3EE /* RDError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA26E237158BD00A8F3EE /* RDError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		43BCA2602371447500A8F3EE /* Hot.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hot.storyboard; sourceTree = "<group>"; };
 		43BCA262237145E800A8F3EE /* HotListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotListDelegate.swift; sourceTree = "<group>"; };
 		43BCA2642371485800A8F3EE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		43BCA266237154FF00A8F3EE /* RedditHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditHTTPClient.swift; sourceTree = "<group>"; };
+		43BCA2682371554600A8F3EE /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		43BCA26A237155A800A8F3EE /* QueryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryParams.swift; sourceTree = "<group>"; };
+		43BCA26C2371580500A8F3EE /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		43BCA26E237158BD00A8F3EE /* RDError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +199,11 @@
 		43BCA1EE237101BC00A8F3EE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				43BCA26C2371580500A8F3EE /* HTTPClient.swift */,
+				43BCA266237154FF00A8F3EE /* RedditHTTPClient.swift */,
+				43BCA2682371554600A8F3EE /* Endpoints.swift */,
+				43BCA26A237155A800A8F3EE /* QueryParams.swift */,
+				43BCA26E237158BD00A8F3EE /* RDError.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -324,13 +339,18 @@
 				43BCA2342371304300A8F3EE /* TopCoordinator.swift in Sources */,
 				43BCA23B2371347D00A8F3EE /* HotCoordinator.swift in Sources */,
 				43BCA1F62371033800A8F3EE /* HotViewController.swift in Sources */,
+				43BCA2692371554600A8F3EE /* Endpoints.swift in Sources */,
 				43BCA20323710FF200A8F3EE /* Presentable.swift in Sources */,
 				43BCA239237131BF00A8F3EE /* TopListDelegate.swift in Sources */,
 				43BCA1F02371031600A8F3EE /* TabbarController.swift in Sources */,
 				43BCA2072371140000A8F3EE /* Router.swift in Sources */,
 				43BCA20A2371192400A8F3EE /* Storyboarded.swift in Sources */,
+				43BCA26F237158BD00A8F3EE /* RDError.swift in Sources */,
+				43BCA26B237155A800A8F3EE /* QueryParams.swift in Sources */,
 				43BCA1C223708EDB00A8F3EE /* SceneDelegate.swift in Sources */,
+				43BCA267237154FF00A8F3EE /* RedditHTTPClient.swift in Sources */,
 				43BCA2652371485800A8F3EE /* Model.swift in Sources */,
+				43BCA26D2371580500A8F3EE /* HTTPClient.swift in Sources */,
 				43BCA20123710F8900A8F3EE /* AppCoordinator.swift in Sources */,
 				43BCA1FB2371043700A8F3EE /* PostDetailsViewController.swift in Sources */,
 			);
