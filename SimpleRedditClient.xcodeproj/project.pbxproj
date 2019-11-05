@@ -32,6 +32,7 @@
 		43BCA23B2371347D00A8F3EE /* HotCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA23A2371347D00A8F3EE /* HotCoordinator.swift */; };
 		43BCA2612371447500A8F3EE /* Hot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA2602371447500A8F3EE /* Hot.storyboard */; };
 		43BCA263237145E800A8F3EE /* HotListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA262237145E800A8F3EE /* HotListDelegate.swift */; };
+		43BCA2652371485800A8F3EE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2642371485800A8F3EE /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		43BCA23A2371347D00A8F3EE /* HotCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCoordinator.swift; sourceTree = "<group>"; };
 		43BCA2602371447500A8F3EE /* Hot.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hot.storyboard; sourceTree = "<group>"; };
 		43BCA262237145E800A8F3EE /* HotListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotListDelegate.swift; sourceTree = "<group>"; };
+		43BCA2642371485800A8F3EE /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		43BCA1ED237101B600A8F3EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43BCA2642371485800A8F3EE /* Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				43BCA2072371140000A8F3EE /* Router.swift in Sources */,
 				43BCA20A2371192400A8F3EE /* Storyboarded.swift in Sources */,
 				43BCA1C223708EDB00A8F3EE /* SceneDelegate.swift in Sources */,
+				43BCA2652371485800A8F3EE /* Model.swift in Sources */,
 				43BCA20123710F8900A8F3EE /* AppCoordinator.swift in Sources */,
 				43BCA1FB2371043700A8F3EE /* PostDetailsViewController.swift in Sources */,
 			);
