@@ -11,6 +11,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private lazy var applicationCoordinator: Coordinator = AppCoordinator()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -19,14 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        window = UIWindow(frame: UIScreen.main.bounds)
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+//        window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         
-        let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let tabVC = sb.instantiateViewController(identifier: "TabBarViewController")
-        
-        window?.rootViewController = tabVC
-//        window?.rootViewController = appCoordinator.toPresentable()
+        guard let appCoordinator = applicationCoordinator as? AppCoordinator else { return }
+        window?.rootViewController = appCoordinator.rootViewController
+        appCoordinator.start()
+
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
     }
@@ -58,7 +59,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
+    
 }
 

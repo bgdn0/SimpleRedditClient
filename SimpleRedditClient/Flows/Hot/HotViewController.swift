@@ -1,5 +1,5 @@
 //
-//  PopularViewController.swift
+//  HotViewController.swift
 //  SimpleRedditClient
 //
 //  Created by Bogdan Yatsiuk on 05.11.2019.
@@ -8,6 +8,7 @@
 
 import UIKit
 
-class PopularViewController: UIViewController {
+class HotViewController: UIViewController, Storyboarded {
+    weak var delegate: HotListDelegate?
     
 }

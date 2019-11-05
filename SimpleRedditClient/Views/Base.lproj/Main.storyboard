@@ -18,12 +18,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sg3-Kc-KAN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2641" y="874"/>
+            <point key="canvasLocation" x="-1809" y="874"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar Controller-->
         <scene sceneID="O1H-yD-CKB">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarViewController" id="Y5d-OK-2Nn" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabbarController" id="Y5d-OK-2Nn" customClass="TabbarController" customModule="SimpleRedditClient" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bNa-Qh-FXs"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AGr-gc-4zg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -32,28 +32,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="csR-B9-j5e" kind="relationship" relationship="viewControllers" id="k9Q-p1-qpu"/>
-                        <segue destination="2CZ-5z-kdQ" kind="relationship" relationship="viewControllers" id="U06-ty-7HK"/>
                         <segue destination="pZ0-LA-BUb" kind="relationship" relationship="viewControllers" id="AY5-3A-vpe"/>
-                        <segue destination="PJ2-7J-tkK" kind="relationship" relationship="viewControllers" id="jKD-HH-Vti"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VFG-cL-K4p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1343" y="110"/>
-        </scene>
-        <!--Popular-->
-        <scene sceneID="EYD-gj-ldg">
-            <objects>
-                <navigationController id="2CZ-5z-kdQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Popular" image="star" catalog="system" selectedImage="star.fill" id="FbV-8d-Rzx"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XeZ-eR-76j">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oFK-T8-Ooj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1687" y="874"/>
         </scene>
         <!--Hot-->
         <scene sceneID="zN7-8w-N5A">
@@ -69,29 +53,11 @@
             </objects>
             <point key="canvasLocation" x="-759" y="874"/>
         </scene>
-        <!--New-->
-        <scene sceneID="8Bf-70-b9L">
-            <objects>
-                <navigationController id="PJ2-7J-tkK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="New" image="clock" catalog="system" selectedImage="clock.fill" id="kYP-Rn-0VI"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Cjh-F1-EXM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ba3-LS-L8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="126" y="874"/>
-        </scene>
     </scenes>
     <resources>
         <image name="chart.bar" catalog="system" width="64" height="44"/>
         <image name="chart.bar.fill" catalog="system" width="64" height="44"/>
-        <image name="clock" catalog="system" width="64" height="60"/>
-        <image name="clock.fill" catalog="system" width="64" height="60"/>
         <image name="flame" catalog="system" width="54" height="64"/>
         <image name="flame.fill" catalog="system" width="54" height="64"/>
-        <image name="star" catalog="system" width="64" height="58"/>
-        <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
 </document>

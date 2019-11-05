@@ -10,11 +10,29 @@
         <!--Top View Controller-->
         <scene sceneID="WC0-Wb-uqq">
             <objects>
-                <viewController storyboardIdentifier="TopViewController" id="ygN-kl-Idy" customClass="TopViewController" customModule="TestReddit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopViewController" id="ygN-kl-Idy" customClass="TopViewController" customModule="SimpleRedditClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wxt-2f-14e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4We-zE-cDu">
+                                <rect key="frame" x="56" y="145" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Full Image"/>
+                                <connections>
+                                    <action selector="fullImageAction:" destination="ygN-kl-Idy" eventType="touchUpInside" id="7R8-bC-cUz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcY-GK-4ye">
+                                <rect key="frame" x="166" y="145" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Post Details"/>
+                                <connections>
+                                    <action selector="postDetailsAction:" destination="ygN-kl-Idy" eventType="touchUpInside" id="6FS-Ao-cbS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="YCb-WL-HfW"/>
                     </view>
                 </viewController>

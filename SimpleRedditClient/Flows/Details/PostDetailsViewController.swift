@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostDetailsViewController: UIViewController {
+class PostDetailsViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()

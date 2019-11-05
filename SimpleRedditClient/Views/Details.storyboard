@@ -10,10 +10,19 @@
         <!--Post Details View Controller-->
         <scene sceneID="1AO-1n-kLH">
             <objects>
-                <viewController storyboardIdentifier="PostDetailsViewController" id="kO8-Zc-EAk" customClass="PostDetailsViewController" customModule="TestReddit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDetailsViewController" id="kO8-Zc-EAk" customClass="PostDetailsViewController" customModule="SimpleRedditClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jtc-A1-bii">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVB-h5-NWt">
+                                <rect key="frame" x="138" y="280" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="3y9-eF-2a9"/>
                     </view>
@@ -25,10 +34,19 @@
         <!--Full Image View Controller-->
         <scene sceneID="8Z4-0K-JlT">
             <objects>
-                <viewController storyboardIdentifier="FullImageViewController" id="Wwk-It-Oig" customClass="FullImageViewController" customModule="TestReddit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FullImageViewController" id="Wwk-It-Oig" customClass="FullImageViewController" customModule="SimpleRedditClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hh2-e3-BPC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubD-gn-ky0">
+                                <rect key="frame" x="186" y="243" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="geq-A3-Tbo"/>
                     </view>

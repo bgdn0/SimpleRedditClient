@@ -1,5 +1,5 @@
 //
-//  TabbarViewController.swift
+//  StoryboardsEnum.swift
 //  SimpleRedditClient
 //
 //  Created by Bogdan Yatsiuk on 05.11.2019.
@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+enum Storyboards: String {
+  case main = "Main"
+  case top = "Top"
+  case hot = "Hot"
+  case details = "Details"
+}

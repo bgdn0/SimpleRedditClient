@@ -10,11 +10,11 @@
         <!--Hot View Controller-->
         <scene sceneID="vc4-ou-T3h">
             <objects>
-                <viewController storyboardIdentifier="HotViewController" id="4ic-C6-anm" customClass="HotViewController" customModule="TestReddit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HotViewController" id="4ic-C6-anm" customClass="HotViewController" customModule="SimpleRedditClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vkH-gB-2jY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ccj-nd-oe8"/>
                     </view>
                 </viewController>

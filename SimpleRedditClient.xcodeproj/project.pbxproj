@@ -15,17 +15,23 @@
 		43BCA1D62370E5A500A8F3EE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA1D52370E5A500A8F3EE /* Coordinator.swift */; };
 		43BCA1DA2370FD9600A8F3EE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA1D92370FD9600A8F3EE /* Default-568h@2x.png */; };
 		43BCA1DE2371003400A8F3EE /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA1DD2371003400A8F3EE /* Top.storyboard */; };
-		43BCA1E02371004300A8F3EE /* Popular.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA1DF2371004300A8F3EE /* Popular.storyboard */; };
-		43BCA1E22371004B00A8F3EE /* Hot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA1E12371004B00A8F3EE /* Hot.storyboard */; };
-		43BCA1E42371005600A8F3EE /* New.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA1E32371005600A8F3EE /* New.storyboard */; };
 		43BCA1E62371005E00A8F3EE /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA1E52371005E00A8F3EE /* Details.storyboard */; };
-		43BCA1F02371031600A8F3EE /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA1EF2371031600A8F3EE /* TabbarViewController.swift */; };
+		43BCA1F02371031600A8F3EE /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA1EF2371031600A8F3EE /* TabbarController.swift */; };
 		43BCA1F22371032100A8F3EE /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA1F12371032100A8F3EE /* TopViewController.swift */; };
-		43BCA1F42371033000A8F3EE /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA1F32371033000A8F3EE /* PopularViewController.swift */; };
 		43BCA1F62371033800A8F3EE /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA1F52371033800A8F3EE /* HotViewController.swift */; };
-		43BCA1F82371034100A8F3EE /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA1F72371034100A8F3EE /* NewViewController.swift */; };
 		43BCA1FB2371043700A8F3EE /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA1FA2371043700A8F3EE /* PostDetailsViewController.swift */; };
 		43BCA1FD2371047F00A8F3EE /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA1FC2371047F00A8F3EE /* FullImageViewController.swift */; };
+		43BCA20123710F8900A8F3EE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA20023710F8900A8F3EE /* AppCoordinator.swift */; };
+		43BCA20323710FF200A8F3EE /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA20223710FF200A8F3EE /* Presentable.swift */; };
+		43BCA205237110D400A8F3EE /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA204237110D400A8F3EE /* Routable.swift */; };
+		43BCA2072371140000A8F3EE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2062371140000A8F3EE /* Router.swift */; };
+		43BCA20A2371192400A8F3EE /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2092371192400A8F3EE /* Storyboarded.swift */; };
+		43BCA20C2371197D00A8F3EE /* StoryboardsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA20B2371197D00A8F3EE /* StoryboardsEnum.swift */; };
+		43BCA2342371304300A8F3EE /* TopCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2332371304300A8F3EE /* TopCoordinator.swift */; };
+		43BCA239237131BF00A8F3EE /* TopListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA238237131BF00A8F3EE /* TopListDelegate.swift */; };
+		43BCA23B2371347D00A8F3EE /* HotCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA23A2371347D00A8F3EE /* HotCoordinator.swift */; };
+		43BCA2612371447500A8F3EE /* Hot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BCA2602371447500A8F3EE /* Hot.storyboard */; };
+		43BCA263237145E800A8F3EE /* HotListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA262237145E800A8F3EE /* HotListDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,17 +45,23 @@
 		43BCA1D52370E5A500A8F3EE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		43BCA1D92370FD9600A8F3EE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		43BCA1DD2371003400A8F3EE /* Top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
-		43BCA1DF2371004300A8F3EE /* Popular.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popular.storyboard; sourceTree = "<group>"; };
-		43BCA1E12371004B00A8F3EE /* Hot.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hot.storyboard; sourceTree = "<group>"; };
-		43BCA1E32371005600A8F3EE /* New.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = New.storyboard; sourceTree = "<group>"; };
 		43BCA1E52371005E00A8F3EE /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
-		43BCA1EF2371031600A8F3EE /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		43BCA1EF2371031600A8F3EE /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		43BCA1F12371032100A8F3EE /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
-		43BCA1F32371033000A8F3EE /* PopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
 		43BCA1F52371033800A8F3EE /* HotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
-		43BCA1F72371034100A8F3EE /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		43BCA1FA2371043700A8F3EE /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		43BCA1FC2371047F00A8F3EE /* FullImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
+		43BCA20023710F8900A8F3EE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		43BCA20223710FF200A8F3EE /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		43BCA204237110D400A8F3EE /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		43BCA2062371140000A8F3EE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Router.swift; path = SimpleRedditClient/Coordinator/Router.swift; sourceTree = SOURCE_ROOT; };
+		43BCA2092371192400A8F3EE /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		43BCA20B2371197D00A8F3EE /* StoryboardsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardsEnum.swift; sourceTree = "<group>"; };
+		43BCA2332371304300A8F3EE /* TopCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCoordinator.swift; sourceTree = "<group>"; };
+		43BCA238237131BF00A8F3EE /* TopListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopListDelegate.swift; sourceTree = "<group>"; };
+		43BCA23A2371347D00A8F3EE /* HotCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCoordinator.swift; sourceTree = "<group>"; };
+		43BCA2602371447500A8F3EE /* Hot.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hot.storyboard; sourceTree = "<group>"; };
+		43BCA262237145E800A8F3EE /* HotListDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotListDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,7 @@
 				43BCA1ED237101B600A8F3EE /* Model */,
 				43BCA1EE237101BC00A8F3EE /* Networking */,
 				43BCA1D32370E52900A8F3EE /* Coordinator */,
+				43BCA2082371189E00A8F3EE /* Helpers */,
 				43BCA1DB2371000300A8F3EE /* Flows */,
 				43BCA1DC2371000C00A8F3EE /* Views */,
 				43BCA1FF2371054400A8F3EE /* Supporting Files */,
@@ -97,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				43BCA1D42370E54F00A8F3EE /* Protocols */,
+				43BCA20023710F8900A8F3EE /* AppCoordinator.swift */,
+				43BCA2062371140000A8F3EE /* Router.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -105,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				43BCA1D52370E5A500A8F3EE /* Coordinator.swift */,
+				43BCA20223710FF200A8F3EE /* Presentable.swift */,
+				43BCA204237110D400A8F3EE /* Routable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -112,12 +129,11 @@
 		43BCA1DB2371000300A8F3EE /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				43BCA1E82371015100A8F3EE /* MainFlow */,
-				43BCA1E92371015800A8F3EE /* TopFlow */,
-				43BCA1EA2371015E00A8F3EE /* PopularFlow */,
-				43BCA1EB2371017D00A8F3EE /* HotFlow */,
-				43BCA1EC2371019600A8F3EE /* NewFlow */,
-				43BCA1F9237103F500A8F3EE /* DetailsFlow */,
+				43BCA2372371319D00A8F3EE /* Protocols */,
+				43BCA1E82371015100A8F3EE /* Main */,
+				43BCA1E92371015800A8F3EE /* Top */,
+				43BCA1EB2371017D00A8F3EE /* Hot */,
+				43BCA1F9237103F500A8F3EE /* Details */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -127,52 +143,37 @@
 			children = (
 				43BCA1C523708EDB00A8F3EE /* Main.storyboard */,
 				43BCA1DD2371003400A8F3EE /* Top.storyboard */,
-				43BCA1DF2371004300A8F3EE /* Popular.storyboard */,
-				43BCA1E12371004B00A8F3EE /* Hot.storyboard */,
-				43BCA1E32371005600A8F3EE /* New.storyboard */,
+				43BCA2602371447500A8F3EE /* Hot.storyboard */,
 				43BCA1E52371005E00A8F3EE /* Details.storyboard */,
+				43BCA20B2371197D00A8F3EE /* StoryboardsEnum.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		43BCA1E82371015100A8F3EE /* MainFlow */ = {
+		43BCA1E82371015100A8F3EE /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				43BCA1EF2371031600A8F3EE /* TabbarViewController.swift */,
+				43BCA1EF2371031600A8F3EE /* TabbarController.swift */,
 			);
-			path = MainFlow;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		43BCA1E92371015800A8F3EE /* TopFlow */ = {
+		43BCA1E92371015800A8F3EE /* Top */ = {
 			isa = PBXGroup;
 			children = (
 				43BCA1F12371032100A8F3EE /* TopViewController.swift */,
+				43BCA2332371304300A8F3EE /* TopCoordinator.swift */,
 			);
-			path = TopFlow;
+			path = Top;
 			sourceTree = "<group>";
 		};
-		43BCA1EA2371015E00A8F3EE /* PopularFlow */ = {
-			isa = PBXGroup;
-			children = (
-				43BCA1F32371033000A8F3EE /* PopularViewController.swift */,
-			);
-			path = PopularFlow;
-			sourceTree = "<group>";
-		};
-		43BCA1EB2371017D00A8F3EE /* HotFlow */ = {
+		43BCA1EB2371017D00A8F3EE /* Hot */ = {
 			isa = PBXGroup;
 			children = (
 				43BCA1F52371033800A8F3EE /* HotViewController.swift */,
+				43BCA23A2371347D00A8F3EE /* HotCoordinator.swift */,
 			);
-			path = HotFlow;
-			sourceTree = "<group>";
-		};
-		43BCA1EC2371019600A8F3EE /* NewFlow */ = {
-			isa = PBXGroup;
-			children = (
-				43BCA1F72371034100A8F3EE /* NewViewController.swift */,
-			);
-			path = NewFlow;
+			path = Hot;
 			sourceTree = "<group>";
 		};
 		43BCA1ED237101B600A8F3EE /* Model */ = {
@@ -189,13 +190,13 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		43BCA1F9237103F500A8F3EE /* DetailsFlow */ = {
+		43BCA1F9237103F500A8F3EE /* Details */ = {
 			isa = PBXGroup;
 			children = (
 				43BCA1FA2371043700A8F3EE /* PostDetailsViewController.swift */,
 				43BCA1FC2371047F00A8F3EE /* FullImageViewController.swift */,
 			);
-			path = DetailsFlow;
+			path = Details;
 			sourceTree = "<group>";
 		};
 		43BCA1FE2371053400A8F3EE /* AppDelegate */ = {
@@ -218,6 +219,23 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		43BCA2082371189E00A8F3EE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				43BCA2092371192400A8F3EE /* Storyboarded.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		43BCA2372371319D00A8F3EE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				43BCA238237131BF00A8F3EE /* TopListDelegate.swift */,
+				43BCA262237145E800A8F3EE /* HotListDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -234,7 +252,7 @@
 			dependencies = (
 			);
 			name = SimpleRedditClient;
-			productName = TestReddit;
+			productName = SimpleRedditClient;
 			productReference = 43BCA1BC23708EDB00A8F3EE /* SimpleRedditClient.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -276,15 +294,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43BCA1E02371004300A8F3EE /* Popular.storyboard in Resources */,
+				43BCA2612371447500A8F3EE /* Hot.storyboard in Resources */,
 				43BCA1CC23708EDC00A8F3EE /* LaunchScreen.storyboard in Resources */,
 				43BCA1DA2370FD9600A8F3EE /* Default-568h@2x.png in Resources */,
-				43BCA1E22371004B00A8F3EE /* Hot.storyboard in Resources */,
 				43BCA1C923708EDC00A8F3EE /* Assets.xcassets in Resources */,
 				43BCA1C723708EDB00A8F3EE /* Main.storyboard in Resources */,
 				43BCA1DE2371003400A8F3EE /* Top.storyboard in Resources */,
 				43BCA1E62371005E00A8F3EE /* Details.storyboard in Resources */,
-				43BCA1E42371005600A8F3EE /* New.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,15 +311,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BCA263237145E800A8F3EE /* HotListDelegate.swift in Sources */,
 				43BCA1F22371032100A8F3EE /* TopViewController.swift in Sources */,
+				43BCA20C2371197D00A8F3EE /* StoryboardsEnum.swift in Sources */,
 				43BCA1D62370E5A500A8F3EE /* Coordinator.swift in Sources */,
+				43BCA205237110D400A8F3EE /* Routable.swift in Sources */,
 				43BCA1FD2371047F00A8F3EE /* FullImageViewController.swift in Sources */,
 				43BCA1C023708EDB00A8F3EE /* AppDelegate.swift in Sources */,
+				43BCA2342371304300A8F3EE /* TopCoordinator.swift in Sources */,
+				43BCA23B2371347D00A8F3EE /* HotCoordinator.swift in Sources */,
 				43BCA1F62371033800A8F3EE /* HotViewController.swift in Sources */,
-				43BCA1F42371033000A8F3EE /* PopularViewController.swift in Sources */,
-				43BCA1F82371034100A8F3EE /* NewViewController.swift in Sources */,
-				43BCA1F02371031600A8F3EE /* TabbarViewController.swift in Sources */,
+				43BCA20323710FF200A8F3EE /* Presentable.swift in Sources */,
+				43BCA239237131BF00A8F3EE /* TopListDelegate.swift in Sources */,
+				43BCA1F02371031600A8F3EE /* TabbarController.swift in Sources */,
+				43BCA2072371140000A8F3EE /* Router.swift in Sources */,
+				43BCA20A2371192400A8F3EE /* Storyboarded.swift in Sources */,
 				43BCA1C223708EDB00A8F3EE /* SceneDelegate.swift in Sources */,
+				43BCA20123710F8900A8F3EE /* AppCoordinator.swift in Sources */,
 				43BCA1FB2371043700A8F3EE /* PostDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
