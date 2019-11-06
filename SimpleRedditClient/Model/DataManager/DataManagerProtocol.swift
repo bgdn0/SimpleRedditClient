@@ -10,6 +10,8 @@ import Foundation
 
 protocol DataManagerProtocol {
     typealias CompletionHandler = () -> Void
+    
+    var fetchParams: FetchParams { get set }
 
     func numberOfPosts() -> Int
     func postForItem(at indexPath: IndexPath) -> RDPostProtocol?

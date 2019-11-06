@@ -33,6 +33,7 @@ extension TopCoordinator: TopListDelegate {
     
     func topListDidSelectImageWith(url: URL) {
         let imageController = FullImageViewController.instantiate(from: Storyboards.details)
+        imageController.imageURL = url
         
         let nav = UINavigationController()
         nav.setViewControllers([imageController], animated: true)

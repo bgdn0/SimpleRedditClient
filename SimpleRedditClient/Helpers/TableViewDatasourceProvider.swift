@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewDatasourceProvider: NSObject {
     private var dataManager: DataManagerProtocol
+    weak var cellDelegate: PostTableViewCellDelegate?
     
     init(dataManager: DataManagerProtocol) {
         self.dataManager = dataManager
@@ -23,6 +24,11 @@ class TableViewDatasourceProvider: NSObject {
     
     func itemForRow(at indexPath: IndexPath) -> RDPostProtocol? {
         return dataManager.postForItem(at: indexPath)
+    }
+    
+    // MARK: - Params Manager Factory method
+    func makeParametersManger() -> ParametersManagerProtocol {
+        return ParametersManager(dataManager: self.dataManager)
     }
 }
 
@@ -38,6 +44,8 @@ extension TableViewDatasourceProvider: UITableViewDataSource {
             let redditCell = cell as? PostTableViewCell else {
                 return cell
         }
+        
+        redditCell.delegate = cellDelegate
         
         redditCell.subredditLabel?.text = post.subRedditName
         redditCell.userNameLabel?.text = post.authorFullName

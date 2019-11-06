@@ -15,7 +15,7 @@ class DataManager: DataManagerProtocol {
     private var storage: [RDPostProtocol] = []
     
     private var dataProvider: DataProvider
-    private var fetchParams = FetchParams()
+    var fetchParams = FetchParams()
     
     private var isFetchInProgress = false
     private var fetchCompletions = [CompletionHandler]()

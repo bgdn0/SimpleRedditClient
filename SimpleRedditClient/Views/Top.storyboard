@@ -28,6 +28,9 @@
                                     <segment title="Year"/>
                                     <segment title="All time"/>
                                 </segments>
+                                <connections>
+                                    <action selector="topPeriodChanged:" destination="ygN-kl-Idy" eventType="valueChanged" id="DlT-P1-CAZ"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b7d-J9-iXy">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
@@ -50,6 +53,7 @@
                         <viewLayoutGuide key="safeArea" id="YCb-WL-HfW"/>
                     </view>
                     <connections>
+                        <outlet property="periodSegments" destination="6xG-2O-Rju" id="aMj-Hj-GVc"/>
                         <outlet property="tableView" destination="b7d-J9-iXy" id="0SF-r4-QqD"/>
                     </connections>
                 </viewController>

@@ -111,4 +111,19 @@ struct RDImage: Decodable {
 
 struct RDImageSource: Decodable {
     let url: URL
+    
+    enum CodingKeys : String, CodingKey {
+        case url
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        let stringURL = try container.decode(String.self, forKey: .url)
+        if let url = URL(string: stringURL.replacingOccurrences(of: "&amp;", with: "&")) {
+            self.url = url
+        } else {
+            self.url = try container.decode(URL.self, forKey: .url)
+        }
+    }
 }

@@ -23,6 +23,12 @@ class TableViewDatasourceFactory {
                                                configuration: ProviderConfiguration(endpoint: endpoint, limit: pageSize))
         let dataManger = DataManager(dataProvider: netwProvider, pageSize: pageSize, maxPages: maxPages)
         
+        if controller == .top {
+            dataManger.fetchParams.t = .day
+        }
+        
         return TableViewDatasourceProvider(dataManager: dataManger)
     }
+    
+    
 }

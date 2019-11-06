@@ -52,6 +52,8 @@
 		43BCA2DD23722AF500A8F3EE /* NumberUnitsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2DC23722AF500A8F3EE /* NumberUnitsFormatter.swift */; };
 		43BCA2DF2372340C00A8F3EE /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2DE2372340C00A8F3EE /* DateFormatter.swift */; };
 		43BCA2E2237299D600A8F3EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BCA2E1237299D600A8F3EE /* WebKit.framework */; };
+		43BCA2E42372DC9300A8F3EE /* ParametersManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2E32372DC9300A8F3EE /* ParametersManagerProtocol.swift */; };
+		43BCA2E62372DCBA00A8F3EE /* ParametersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2E52372DCBA00A8F3EE /* ParametersManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		43BCA2DC23722AF500A8F3EE /* NumberUnitsFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberUnitsFormatter.swift; sourceTree = "<group>"; };
 		43BCA2DE2372340C00A8F3EE /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		43BCA2E1237299D600A8F3EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		43BCA2E32372DC9300A8F3EE /* ParametersManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersManagerProtocol.swift; sourceTree = "<group>"; };
+		43BCA2E52372DCBA00A8F3EE /* ParametersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +321,8 @@
 			children = (
 				43BCA2D22371C0ED00A8F3EE /* DataManagerProtocol.swift */,
 				43BCA2D62371E27800A8F3EE /* DataManager.swift */,
+				43BCA2E32372DC9300A8F3EE /* ParametersManagerProtocol.swift */,
+				43BCA2E52372DCBA00A8F3EE /* ParametersManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				43BCA2A423719F5C00A8F3EE /* PostTableViewCell.swift in Sources */,
 				43BCA2D52371E00B00A8F3EE /* TableViewDatasourceProvider.swift in Sources */,
 				43BCA1FD2371047F00A8F3EE /* FullImageViewController.swift in Sources */,
+				43BCA2E62372DCBA00A8F3EE /* ParametersManager.swift in Sources */,
 				43BCA2DB2371F19700A8F3EE /* UITableView+CellRegister.swift in Sources */,
 				43BCA1C023708EDB00A8F3EE /* AppDelegate.swift in Sources */,
 				43BCA2342371304300A8F3EE /* TopCoordinator.swift in Sources */,
@@ -425,6 +432,7 @@
 				43BCA20323710FF200A8F3EE /* Presentable.swift in Sources */,
 				43BCA239237131BF00A8F3EE /* TopListDelegate.swift in Sources */,
 				43BCA1F02371031600A8F3EE /* TabbarController.swift in Sources */,
+				43BCA2E42372DC9300A8F3EE /* ParametersManagerProtocol.swift in Sources */,
 				43BCA2072371140000A8F3EE /* Router.swift in Sources */,
 				43BCA20A2371192400A8F3EE /* Storyboarded.swift in Sources */,
 				43BCA26F237158BD00A8F3EE /* RDError.swift in Sources */,

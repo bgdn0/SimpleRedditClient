@@ -14,14 +14,14 @@ class PostDetailsViewController: UIViewController, Storyboarded {
     var redditPostURL: URL?
 
     @IBOutlet weak var webView: WKWebView?
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         guard let url = redditPostURL else { return }
         
-        activityIndicator.startAnimating()
+        activityIndicator?.startAnimating()
         webView?.navigationDelegate = self
         webView?.load(URLRequest(url: url))
     }
@@ -30,6 +30,6 @@ class PostDetailsViewController: UIViewController, Storyboarded {
 extension PostDetailsViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView,
       didFinish navigation: WKNavigation!) {
-        activityIndicator.stopAnimating()
+        activityIndicator?.stopAnimating()
     }
 }

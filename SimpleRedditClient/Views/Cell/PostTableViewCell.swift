@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PostTableViewCellDelegate: AnyObject {
+    func didTapOnImage(for cell: PostTableViewCell)
+}
+
 class PostTableViewCell: UITableViewCell {
     
     static let identifier = "ReditPostCellIdentifier"
@@ -24,6 +28,8 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var thumbnailWidthContraint: NSLayoutConstraint?
     @IBOutlet weak var titleLeftContraint: NSLayoutConstraint?
+    
+    weak var delegate: PostTableViewCellDelegate?
     
     var thumbnail: UIImage? {
         didSet {
@@ -58,6 +64,6 @@ class PostTableViewCell: UITableViewCell {
     
     // MARK: - Gestures
     @objc func handleTapGesture(_ recognizer: UITapGestureRecognizer) {
-        print("IMG tag")
+        delegate?.didTapOnImage(for: self)
     }
 }

@@ -12,72 +12,77 @@ class TopViewController: UIViewController, Storyboarded {
     
     var posts: [RDPostProtocol] = []
     @IBOutlet weak var tableView: UITableView?
+    @IBOutlet weak var periodSegments: UISegmentedControl?
+    
+    private let refreshControl = UIRefreshControl()
     
     var tableViewDatasource: TableViewDatasourceProvider?
     weak var delegate: TopListDelegate?
+    
+    var paramsManager: ParametersManagerProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "Reddit: Top"
+        periodSegments?.selectedSegmentIndex = 1 //TODO: Read from settings
+        
+        tableViewDatasource?.cellDelegate = self
         
         tableView?.registerRedditCell()
         tableView?.delegate = self
         tableView?.dataSource = tableViewDatasource
         tableView?.prefetchDataSource = tableViewDatasource
+        tableView?.refreshControl = refreshControl
+        
+        paramsManager = tableViewDatasource?.makeParametersManger()
         
         tableViewDatasource?.relodData { [weak self] in
             self?.tableView?.reloadData()
         }
         
-//        let client = RedditHTTPClient()
-//        let netwProvider = NetworkDataProvider(client: client, configuration: ProviderConfiguration(endpoint: .top, limit: 50))
-//        netwProvider.perforFetch { [weak self] posts in
-//            print(posts.count)
-//            self?.posts = posts
-//
-//            DispatchQueue.main.async {
-//                self?.tableView?.reloadData()
-//            }
-//
-//        }
-//
+        refreshControl.addTarget(self, action: #selector(refreshRedditPosts(_:)), for: .valueChanged)
+    }
+    
+    // MARK: - Actions
+    @IBAction func topPeriodChanged(_ sender: UISegmentedControl) {
+        var period = QueryParams.Top.day
+        switch sender.selectedSegmentIndex {
+        case 0:
+            period = QueryParams.Top.hour
+        case 1:
+            period = QueryParams.Top.day
+        case 2:
+            period = QueryParams.Top.week
+        case 3:
+            period = QueryParams.Top.month
+        case 4:
+            period = QueryParams.Top.year
+        case 5:
+            period = QueryParams.Top.all
+        default:
+            break
+        }
         
-//        client.performRequest(to: .top, params: [QueryParams.limit: String(3)]) { (result: Result<RDResponse, RDError>) in
-//
-//            switch result {
-//            case .success(let data):
-//                let a = data.listing.children
-//            case .failure(let error):
-//                print(error)
-//            }
-//
-//        }
+        var fetchParams = FetchParams()
+        fetchParams.t = period
+        paramsManager?.updateParameters(fetchParams)
+        
+        sender.isUserInteractionEnabled = false
+        
+        tableViewDatasource?.relodData { [weak self] in
+            self?.tableView?.reloadData()
+            sender.isUserInteractionEnabled = true
+        }
     }
     
-
-    
-    @IBAction func fullImageAction(_ sender: Any) {
-//        delegate?.topListDidSelectImageWith(url: "")
-    }
-    
-    @IBAction func postDetailsAction(_ sender: Any) {
-//        delegate?.topListDidRequestNavigateToDetails(url: "")
+    @objc func refreshRedditPosts(_ sender: Any) {
+        tableViewDatasource?.relodData { [weak self] in
+            self?.tableView?.reloadData()
+            self?.refreshControl.endRefreshing()
+        }
     }
 }
-
-
-//extension TopViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "yourIdentifier", for: indexPath)
-//        cell.textLabel?.text = posts[indexPath.row].title
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return posts.count
-//    }
-//}
 
 
 extension TopViewController: UITableViewDelegate {
@@ -87,5 +92,16 @@ extension TopViewController: UITableViewDelegate {
             tableView.deselectRow(at: indexPath, animated: false)
         }
     }
-    
+}
+
+
+extension TopViewController: PostTableViewCellDelegate {
+    func didTapOnImage(for cell: PostTableViewCell) {
+        guard let idxPath = tableView?.indexPath(for: cell) else { return }
+        let item = tableViewDatasource?.itemForRow(at: idxPath)
+
+        if let url = item?.fullImageURL {
+            delegate?.topListDidSelectImageWith(url: url)
+        }
+    }
 }
