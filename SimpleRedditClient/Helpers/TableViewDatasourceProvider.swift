@@ -20,6 +20,10 @@ class TableViewDatasourceProvider: NSObject {
             completion()
         }
     }
+    
+    func itemForRow(at indexPath: IndexPath) -> RDPostProtocol? {
+        return dataManager.postForItem(at: indexPath)
+    }
 }
 
 
@@ -30,9 +34,36 @@ extension TableViewDatasourceProvider: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath)
-        guard let post = dataManager.postForItem(at: indexPath) else { return cell }
+        guard let post = itemForRow(at: indexPath),
+            let redditCell = cell as? PostTableViewCell else {
+                return cell
+        }
         
-        cell.textLabel?.text = post.title
+        redditCell.subredditLabel?.text = post.subRedditName
+        redditCell.userNameLabel?.text = post.authorFullName
+        redditCell.titleLabel?.text = post.title
+        redditCell.votesLabel?.text = NumberUnitsFormatter.shared.format(post.votes)
+        redditCell.commentsLabel?.text = "\(NumberUnitsFormatter.shared.format(post.numberOfComments)) Comment\(post.numberOfComments > 1 ? "s" : "")"
+        redditCell.dateLabel?.text = post.createdDate?.timeAgoFormatted()
+
+        
+        guard let thumbnailURL = post.thumbnailURL else {
+            redditCell.thumbnail = nil
+            return redditCell
+        }
+        
+        // TODO: Move to separate service!
+        URLSession.shared.dataTask(with: thumbnailURL) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() {
+                redditCell.thumbnailView?.image = image
+            }
+        }.resume()
         
         return cell
     }

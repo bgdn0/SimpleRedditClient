@@ -21,7 +21,7 @@ class TopViewController: UIViewController, Storyboarded {
         
         navigationItem.title = "Reddit: Top"
         
-        tableView?.regusterRedditCell()
+        tableView?.registerRedditCell()
         tableView?.delegate = self
         tableView?.dataSource = tableViewDatasource
         tableView?.prefetchDataSource = tableViewDatasource
@@ -58,11 +58,11 @@ class TopViewController: UIViewController, Storyboarded {
 
     
     @IBAction func fullImageAction(_ sender: Any) {
-        delegate?.topListDidSelectImageWith(url: "")
+//        delegate?.topListDidSelectImageWith(url: "")
     }
     
     @IBAction func postDetailsAction(_ sender: Any) {
-        delegate?.topListDidRequestNavigateToDetails(url: "")
+//        delegate?.topListDidRequestNavigateToDetails(url: "")
     }
 }
 
@@ -82,7 +82,10 @@ class TopViewController: UIViewController, Storyboarded {
 
 extension TopViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let post = tableViewDatasource?.itemForRow(at: indexPath) {
+            delegate?.topListDidRequestNavigateToDetails(url: post.url)
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
     }
     
 }

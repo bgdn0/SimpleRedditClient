@@ -15,21 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVB-h5-NWt">
-                                <rect key="frame" x="138" y="280" width="91" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhx-y7-olK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="OTm-YZ-xAK">
+                                <rect key="frame" x="197" y="144" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1gT-6V-X8j"/>
+                                    <constraint firstAttribute="width" constant="20" id="9XZ-8Y-yhq"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OTm-YZ-xAK" firstAttribute="centerX" secondItem="jtc-A1-bii" secondAttribute="centerX" id="1iB-FO-bv9"/>
+                            <constraint firstItem="uhx-y7-olK" firstAttribute="leading" secondItem="3y9-eF-2a9" secondAttribute="leading" id="4yc-3N-7I1"/>
+                            <constraint firstItem="uhx-y7-olK" firstAttribute="trailing" secondItem="3y9-eF-2a9" secondAttribute="trailing" id="HLJ-tj-y0n"/>
+                            <constraint firstItem="uhx-y7-olK" firstAttribute="top" secondItem="3y9-eF-2a9" secondAttribute="top" id="e2K-Mb-VuB"/>
+                            <constraint firstItem="OTm-YZ-xAK" firstAttribute="top" secondItem="3y9-eF-2a9" secondAttribute="top" constant="100" id="rAS-UR-kkK"/>
+                            <constraint firstItem="uhx-y7-olK" firstAttribute="bottom" secondItem="3y9-eF-2a9" secondAttribute="bottom" id="wzd-OI-Q31"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3y9-eF-2a9"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="OTm-YZ-xAK" id="H53-7p-Vqv"/>
+                        <outlet property="webView" destination="uhx-y7-olK" id="hra-5G-Eb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6fs-6o-Go7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-25" y="109"/>
+            <point key="canvasLocation" x="-26.086956521739133" y="108.48214285714285"/>
         </scene>
         <!--Full Image View Controller-->
         <scene sceneID="8Z4-0K-JlT">
@@ -38,22 +58,13 @@
                     <view key="view" contentMode="scaleToFill" id="hh2-e3-BPC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubD-gn-ky0">
-                                <rect key="frame" x="186" y="243" width="78" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="geq-A3-Tbo"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8V-vv-blc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="965" y="108"/>
+            <point key="canvasLocation" x="963.76811594202911" y="107.8125"/>
         </scene>
     </scenes>
 </document>

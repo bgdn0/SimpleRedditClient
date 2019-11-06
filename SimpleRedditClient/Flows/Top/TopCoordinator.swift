@@ -25,12 +25,13 @@ class TopCoordinator: Coordinator {
 }
 
 extension TopCoordinator: TopListDelegate {
-    func topListDidRequestNavigateToDetails(url: String) {
+    func topListDidRequestNavigateToDetails(url: URL) {
         let detailsController = PostDetailsViewController.instantiate(from: Storyboards.details)
+        detailsController.redditPostURL = url
         presenter.push(detailsController, animated: true)
     }
     
-    func topListDidSelectImageWith(url: String) {
+    func topListDidSelectImageWith(url: URL) {
         let imageController = FullImageViewController.instantiate(from: Storyboards.details)
         
         let nav = UINavigationController()

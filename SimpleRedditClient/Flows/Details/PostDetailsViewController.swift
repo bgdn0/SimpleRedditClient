@@ -7,24 +7,29 @@
 //
 
 import UIKit
+import WebKit
 
 class PostDetailsViewController: UIViewController, Storyboarded {
+    
+    var redditPostURL: URL?
 
+    @IBOutlet weak var webView: WKWebView?
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        guard let url = redditPostURL else { return }
+        
+        activityIndicator.startAnimating()
+        webView?.navigationDelegate = self
+        webView?.load(URLRequest(url: url))
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension PostDetailsViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView,
+      didFinish navigation: WKNavigation!) {
+        activityIndicator.stopAnimating()
     }
-    */
-
 }

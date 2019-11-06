@@ -9,6 +9,6 @@
 import Foundation
 
 protocol TopListDelegate: AnyObject {
-    func topListDidRequestNavigateToDetails(url: String)
-    func topListDidSelectImageWith(url: String)
+    func topListDidRequestNavigateToDetails(url: URL)
+    func topListDidSelectImageWith(url: URL)
 }

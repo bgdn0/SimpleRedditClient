@@ -9,8 +9,11 @@
 import UIKit
 
 extension UITableView {
-    func regusterRedditCell() {
+    func registerRedditCell() {
         let nib = UINib(nibName: "PostTableViewCell", bundle: Bundle.main)
         self.register(nib, forCellReuseIdentifier: PostTableViewCell.identifier)
+        
+        self.rowHeight = UITableView.automaticDimension;
+        self.estimatedRowHeight = 118.0;
     }
 }

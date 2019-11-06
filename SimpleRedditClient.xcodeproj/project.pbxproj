@@ -49,6 +49,9 @@
 		43BCA2D72371E27800A8F3EE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2D62371E27800A8F3EE /* DataManager.swift */; };
 		43BCA2D92371EA0500A8F3EE /* TableViewDatasourceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2D82371EA0500A8F3EE /* TableViewDatasourceFactory.swift */; };
 		43BCA2DB2371F19700A8F3EE /* UITableView+CellRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2DA2371F19700A8F3EE /* UITableView+CellRegister.swift */; };
+		43BCA2DD23722AF500A8F3EE /* NumberUnitsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2DC23722AF500A8F3EE /* NumberUnitsFormatter.swift */; };
+		43BCA2DF2372340C00A8F3EE /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BCA2DE2372340C00A8F3EE /* DateFormatter.swift */; };
+		43BCA2E2237299D600A8F3EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BCA2E1237299D600A8F3EE /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +99,9 @@
 		43BCA2D62371E27800A8F3EE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		43BCA2D82371EA0500A8F3EE /* TableViewDatasourceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDatasourceFactory.swift; sourceTree = "<group>"; };
 		43BCA2DA2371F19700A8F3EE /* UITableView+CellRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellRegister.swift"; sourceTree = "<group>"; };
+		43BCA2DC23722AF500A8F3EE /* NumberUnitsFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberUnitsFormatter.swift; sourceTree = "<group>"; };
+		43BCA2DE2372340C00A8F3EE /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		43BCA2E1237299D600A8F3EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BCA2E2237299D600A8F3EE /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +121,7 @@
 			children = (
 				43BCA1BE23708EDB00A8F3EE /* SimpleRedditClient */,
 				43BCA1BD23708EDB00A8F3EE /* Products */,
+				43BCA2E0237299D500A8F3EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,6 +277,8 @@
 				43BCA2D42371E00B00A8F3EE /* TableViewDatasourceProvider.swift */,
 				43BCA2D82371EA0500A8F3EE /* TableViewDatasourceFactory.swift */,
 				43BCA2DA2371F19700A8F3EE /* UITableView+CellRegister.swift */,
+				43BCA2DC23722AF500A8F3EE /* NumberUnitsFormatter.swift */,
+				43BCA2DE2372340C00A8F3EE /* DateFormatter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -309,6 +319,14 @@
 				43BCA2D62371E27800A8F3EE /* DataManager.swift */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		43BCA2E0237299D500A8F3EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43BCA2E1237299D600A8F3EE /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BCA2DF2372340C00A8F3EE /* DateFormatter.swift in Sources */,
 				43BCA263237145E800A8F3EE /* HotListDelegate.swift in Sources */,
 				43BCA2D72371E27800A8F3EE /* DataManager.swift in Sources */,
 				43BCA1F22371032100A8F3EE /* TopViewController.swift in Sources */,
@@ -409,6 +428,7 @@
 				43BCA2072371140000A8F3EE /* Router.swift in Sources */,
 				43BCA20A2371192400A8F3EE /* Storyboarded.swift in Sources */,
 				43BCA26F237158BD00A8F3EE /* RDError.swift in Sources */,
+				43BCA2DD23722AF500A8F3EE /* NumberUnitsFormatter.swift in Sources */,
 				43BCA2722371629600A8F3EE /* DataProvider.swift in Sources */,
 				43BCA27E2371727400A8F3EE /* ProviderConfiguration.swift in Sources */,
 				43BCA280237172AD00A8F3EE /* NetworkDataProvider.swift in Sources */,
